@@ -1,0 +1,1 @@
+<option value="{U_STO_ID}">{U_STO_TITLE}</option>
