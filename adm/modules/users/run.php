@@ -8,7 +8,6 @@ $tpl->define(array(
         $moduleName . "item_row" => $prefix . "item_row.tpl",
         $moduleName . "u_page_row" => $prefix . "u_page_row.tpl",
         $moduleName . "u_role_row" => $prefix . "u_role_row.tpl",
-        $moduleName . "u_sto_row" => $prefix . "u_sto_row.tpl",
 ));
 # MAIN #################################################################################
 
@@ -31,7 +30,6 @@ else{
                     "name" => $_POST['name'],
                     "login" => $_POST['login'],
                     "password" => $_POST['password'],
-                    "sto_id" => $_POST['sto_id'],
                     "page_id" => $_POST['page_id']));
                 break;
             }
@@ -40,7 +38,6 @@ else{
                     "name" => $_POST['name'],
                     "login" => $_POST['login'],
                     "password" => $_POST['password'],
-                    "sto_id" => $_POST['sto_id'],
                     "page_id" => $_POST['page_id']));
                 break;
             }
@@ -92,17 +89,7 @@ foreach($rows as $row){
     $tpl->parse("U_PAGE_PAGE_ROWS", ".".$moduleName."u_page_row");
 }
 
-$rows = $dbc->dbselect(array(
-        "table"=>"sto_tochka",
-        "select"=>"id, title"
-    )
-);
-foreach($rows as $row){
-    $tpl->assign("U_STO_ID", $row['id']);
-    $tpl->assign("U_STO_TITLE", $row['title']);
 
-    $tpl->parse("U_STO_ROWS", ".".$moduleName."u_sto_row");
-}
 
 
 $rows = $dbc->dbselect(array(

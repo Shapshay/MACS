@@ -44,12 +44,6 @@
 			<input class="text-input medium-input" type="text" id="name" name="name" value="" />
 			</p>
             <p>
-            <label>СТО</label>
-            <select name="sto_id" id="sto_id" class="small-input">
-                {U_STO_ROWS}
-            </select>
-            </p>
-			<p>
 			<label>Логин</label>
 			<input class="text-input medium-input" type="text" id="login" name="login" value="" />
 			</p>

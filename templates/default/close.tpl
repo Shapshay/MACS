@@ -10,8 +10,8 @@
 <script type="text/javascript">
 	$("#tmp_name").hide();
 </script>
-<img src="images/logo.png" alt="Mobile Delivery"><br>
-<h1>Вход в систему учета</h1>
+<img src="images/logo.png" alt="MACS" style="margin-top: 30px;"><br>
+<h1>Вход в центр аналитики</h1>
 {REG}
 </body>
 </html>

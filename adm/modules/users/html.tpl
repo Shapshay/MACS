@@ -31,8 +31,7 @@ function addVal(){
     $('#login').val('');
     $('#password').val('');
     $('#page_id').val(1);
-	$('#sto_id').val(1);
-								
+
 	$('#tab2_link').click();
 }
 function edtVal(id){
@@ -47,8 +46,7 @@ function edtVal(id){
 				$('#login').val(obj.login);
 				$('#password').val(obj.password);
 				$('#page_id').val(obj.page_id);
-                $('#sto_id').val(obj.sto_id);
-				getRole(id);				
+                getRole(id);
 				$('#tab2_link').click();
 			}
 			else{
