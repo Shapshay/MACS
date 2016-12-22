@@ -79,6 +79,23 @@ $tpl->assign("PAGE_ID", $page_id);
 $tpl->assign("BASE_URL", $_SERVER['HTTP_HOST']);
 //$tpl->assign("ROOT_NAME", ROOT_NAME);
 
+$_CLOSE_TABLES = array(
+	'acts',
+	'articles',
+	'galery',
+	'page_group',
+	'pages',
+	'r_log',
+	'r_page_role',
+	'r_role',
+	'r_user_role',
+	'roots',
+	'site_setings',
+	'stat',
+	'tpl_groups',
+	'variables'
+);
+
 $modules = array();
 $template = file_get_contents(PAGETEMPLATES_PATH.$page_template);
 $template = str_replace("{CONTENT}", $page_content, $template);

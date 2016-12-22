@@ -33,6 +33,7 @@
 	<script src="adm/inc/data_table/jquery.dataTables.min.js"></script>
     {AUTH}
 	{META}
+	{META_HTML}
 </head>
 <body>
 <div  style="display:none;" id="tmp_name"><template style="display:none;">Внутреняя</template></div>
@@ -45,7 +46,7 @@
 
 			<h1 id="sidebar-title" align="center">
 				<a href="/"><img src="images/logo.png" alt="Perch 1.0" width="100" /></a><br>
-				<a href="#">СТО 1.0</a></h1>
+				<a href="#">MACS 1.0</a></h1>
 
 			<!-- Sidebar Profile links -->
 			<div id="profile-links">
