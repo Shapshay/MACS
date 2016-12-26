@@ -5,6 +5,10 @@
  * Date: 29.08.2016
  * Time: 12:18
  */
+# SETTINGS #############################################################################
+$moduleName = "auth";
+
+# MAIN #################################################################################
 session_name('USER');
 @session_start('USER');
 if(isset($_GET['exit'])){
@@ -25,15 +29,16 @@ if(isset($_SESSION['lgn'])){
     );
     $user_row = $rows[0];
     define("ROOT_ID", $user_row['id']);
-    define("ROOT_STO", $user_row['sto_id']);
     define("ROOT_NAME", $user_row['name']);
     $USER_ROLE = explode(",",$user_row['role']);
     $tpl->assign("ROOT_NAME", ROOT_NAME);
     $tpl->assign("ROOT_ID", ROOT_ID);
-    $tpl->assign("ROOT_STO", ROOT_STO);
+    define("VER_ID", $user_row['ver_id']);
+    $tpl->assign("VER_ID", VER_ID);
 }
 else{
     $_SESSION = array();
     header('Location: http://'.$_SERVER['HTTP_HOST'].'/');
     exit();
 }
+$tpl->assign(strtoupper($moduleName), "");
