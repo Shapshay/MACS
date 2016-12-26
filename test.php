@@ -175,3 +175,55 @@ if($IBAnswer->result=='OK'){
 $id_1 = uniqid();
 echo $id_1;
 ?>
+<script>
+    var field_num = 1;
+    $(function(){
+
+    });
+
+    function CreateField() {
+        var field = '<tr id="field_'+field_num+'">'+
+            '<td><input class="text-input small-input" type="text" id="field_name" name="field_name" value="field_name" /></td>'+
+            '<td>'+
+            '<select id="field_type" name="field_type" onchange="ChangeFieldType();">'+
+            '{FIELD_TYPES}'+
+            '</select>'+
+            '</td>'+
+            '<td><input class="text-input small-input" type="text" id="field_default" name="field_default" value="0" /></td>'+
+            '<td><a href="javascript:DelField("field_'+field_num+'");" title="Delete"><img src="images/cross.png" alt="Delete" /></a></td>'+
+            '</tr>';
+        $('#fields_table > tbody:last').append(field);
+        field_num++;
+        alert($('#fields_table > tbody').html());
+    }
+</script>
+<form method="post" id="CreateTableFrm">
+    <p>
+        <label>Название таблицы (на английском, без пробелов)</label>
+        <input class="text-input medium-input" type="text" id="db_table" name="db_table" value="" />
+    </p>
+    <p><button class="button" onclick="CreateField();">Добавить поле</button></p>
+    <table id="fields_table">
+        <thead>
+        <tr>
+            <th>Название поля (на английском, без пробелов)</th>
+            <th>Тип содержимого поля</th>
+            <th>Значение по умолчанию</th>
+            <th>Удалить поле</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="field_0">
+            <td><input class="text-input small-input" type="text" id="field_name" name="field_name" value="field_name" /></td>
+            <td>
+                <select id="field_type" name="field_type" onchange="ChangeFieldType();">
+                    {FIELD_TYPES}
+                </select>
+            </td>
+            <td><input class="text-input small-input" type="text" id="field_default" name="field_default" value="0" /></td>
+            <td><a href="javascript:DelField("field_0");" title="Delete"><img src="images/cross.png" alt="Delete" /></a></td>
+        </tr>
+        </tbody>
+    </table>
+    <p><button class="button" onclick="CreateTable();">Создать таблицу</button></p>
+</form>
