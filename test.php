@@ -170,5 +170,8 @@ if($IBAnswer->result=='OK'){
     echo '<p>Блокировка получения клиента';
 }
 */
-echo md5("weber@jXwVW");
+//echo md5("weber@jXwVW");
+//echo md5("2");
+$id_1 = uniqid();
+echo $id_1;
 ?>

@@ -124,6 +124,8 @@ else{
 	$tpl->assign("PAGE_TITLE", $page_title);
 }
 
+
+
 $tpl->assign("PAGETEMPLATES_PATH", PAGETEMPLATES_PATH);
 
 $tpl->parse("FINAL", "page");

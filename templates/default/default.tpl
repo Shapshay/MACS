@@ -40,6 +40,9 @@
 <script type="text/javascript">
 	$("#tmp_name").hide();
 </script>
+<div class="wait-overlay" id="waitGear">
+	<img src="images/gears.svg" width="200">
+</div>
 <div id="body-wrapper"> <!-- Wrapper for the radial gradient background -->
 
 	<div id="sidebar"><div id="sidebar-wrapper"> <!-- Sidebar with logo and menu -->

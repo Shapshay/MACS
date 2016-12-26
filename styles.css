@@ -110,3 +110,24 @@ html, body{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7e91e1', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
     cursor: pointer;
 }
+.wait-overlay {
+    /* IE8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    /* IE8 */
+    background-color: rgba(71, 168, 123, 0.4);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align:center;
+    display:none;
+    z-index: 10000;
+}
+.wait-overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+}
