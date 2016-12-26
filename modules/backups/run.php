@@ -32,8 +32,9 @@ if ($numRows > 0) {
 
         $tpl->parse("BACK_ROWS", ".".$moduleName."page_rows");
     }
-    $tpl->parse(strtoupper($moduleName), ".".$moduleName."main");
+
 }
 else{
-    $tpl->assign(strtoupper($moduleName), "");
+    $tpl->assign("BACK_ROWS", "");
 }
+$tpl->parse(strtoupper($moduleName), ".".$moduleName."main");
